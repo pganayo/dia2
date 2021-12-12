@@ -153,8 +153,6 @@ class UiManager():
                 mouse.move(x, y, randomize=[35, 7], delay_factor=[1.0, 1.8])
                 wait(0.1, 0.15)
                 # click!
-                mouse.click(button="left")
-                break
             else:
                 # Might be in online mode?
                 found_btn = self._template_finder.search("PLAY_BTN", img, roi=self._config.ui_roi["play_btn"], threshold=0.8)
