@@ -152,13 +152,7 @@ class UiManager():
                 # move the mouse to the play button and randomize the position a bit. +-35 pixel in x direction, +-7 pixel in y direction
                 mouse.move(x, y, randomize=[35, 7], delay_factor=[1.0, 1.8])
                 wait(0.1, 0.15)
-                # click!
-            else:
-                # Might be in online mode?
-                found_btn = self._template_finder.search("PLAY_BTN", img, roi=self._config.ui_roi["play_btn"], threshold=0.8)
-                if found_btn.valid:
-                    Logger.error("Botty only works for single player. Please switch to offline mode and restart botty!")
-                    return False
+                # click!        
             time.sleep(3.0)
 
         difficulty=self._config.general["difficulty"].upper()
